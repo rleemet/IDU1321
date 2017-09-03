@@ -1,0 +1,139 @@
+\documentclass[nobib]{tufte-handout}
+\usepackage[utf8]{inputenc}
+\usepackage[estonian]{babel}
+
+\title{IDU1321 - Ettevõtte äriarhitektuur syllabus}
+\author[Andres Kütt]{Andres Kütt}
+
+%\date{04.08.2017}
+%\geometry{showframe} % debug
+
+\usepackage{natbib}
+
+\usepackage{graphicx}
+ \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{graphics/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Standardize command font styles and environments
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+
+\begin{document}
+\maketitle
+\begin{abstract}
+\noindent
+Käesolev dokument on Tallinna Tehnikaülikooli aine ``IDU1321 - Ettevõtte äriarhitektuur`` ainekaardi laiendus sisaldades bibliograafiat, igakordset lugemismaterjali ning praktikumi ülesandeid. Tegu on sisulisema lisandusega akadeemilisele ainekaardile, mis iganes lahkhelide korral kehtib ametlik ainekaart. Paber hakkab aine edenedes täienema, pea versioone silmas!
+\end{abstract}
+
+\section{Versioonid}
+\begin{description}
+	\item[1.0] Esimene levitatav 
+\end{description}
+
+\section{Meetod}
+Õpitulemused saavutatakse tuginedes järgmistele põhimõtetele
+\begin{itemize}
+	\item Teema on lai, seega kraabime vaid selle pinda vähestest, praktliselt kasulikest, kohtadest
+	\item Valdkond on abstraktne, seega räägime samast asjast mitu korda eri nurkade alt. Pigem vähem aga sügavamat teadmist
+	\item Eelistame akadeemilist teadmist raamistikele ja muule kommertsteabele. Esimene on püsiv väärtus, teised pigem mitte
+	\item Modelleerimine on kommunikatsioonivahend, seega suhtume asjakohastesse standarditesse loovalt
+	\item Tegemist on inseneeriaga, seega õpime tulemusi praktiliselt rakendama\sidenote{Kuna aega on vähe, vaatame ühte lähenemist paljudest. See konkreetne on valitud, sest tal on praktilised väljundid korporatiivkommunikatsioonis}
+\end{itemize}
+
+\section{Õpiväljundid}
+Kursuse läbinud tudeng 
+\begin{enumerate}
+	\item Tunneb ettevõtte arhitektuuri ning äriarhitektuuri peamise mõisteid ja kontseptsioone, saab aru nende seosest infosüsteemidega 
+	\item Oskab suurest süsteemist (nagu ettevõte ja tema infosüsteem) tervikpilti luua ja struktuurselt esitada. 
+	\item Oskab struktuurselt mõelda ja arutleda. 
+	\item Oskab modelleerida ettevõtte põhiprotsesse ning dekomponeerida neid kasutuslugudeks, funktsionaalseteks komponentideks ja tehnoloogilisteks lahendusteks
+	\item Tunneb ja oskab kasutada vähemalt ühte infosüsteemi strateegilise analüüsi ja ärimodelleerimise metoodikat. 
+	\item Oskab kasutada UMLi ja ORMi strateegilise analüüsi põhimudelite ja -vaadete koostamiseks 
+	\item Oskab täita äriarhitekti, ärianalüütiku ja äridisaineri rolle infosüsteemi strateegilise analüüsi projektides. 
+	\item Teab keerukuse ja selle juhtimise põhimõisteid
+	\item Oskab eri vaatepunktidest hinnata lihtsamate süsteemide keerukust
+	\item Oskab luua ja analüüsida seoseid organisatsiooni, selle strateegia ning infosüsteemi vahel
+\end{enumerate}
+
+\section{Loengud/praktikumid}
+Aine sisu on toodud tabelis \ref{tab:content}. Loengus ja praktikumis osalemise eelduseks on, et viidatud artiklid, ja presentatsioonid on läbi loetud\sidenote{Raamatute läbimist ei eelda, need on toodud teemaga süvitsi minna soovijatele}. Loengu eesmärk on loetut täiendada, vastata küsimustele ning siduda eri allikaid. Kirjandust loengus ümber ei jutustata, edukas eksam eeldab sellega tutvumist. 
+
+Loeng koosneb kolmest osast:
+\begin{enumerate}
+	\item Käime üle peamised ideed, mõisted ja kontseptsioonid
+	\item Tegeleme kas kõik koos või väiksemates rühmades harjutustega
+	\item Kokkuvõte harjutustest, sissejuhatus järgmisse teemasse ja ülevaade kirjandusest
+\end{enumerate}
+
+\begin{table*}[ht]
+\small
+	\centering
+	\fontfamily{ppl}\selectfont
+	\begin{tabular}{lp{5cm}p{6cm}p{4cm}}
+		\toprule
+		& Loeng & Harjutus & Kirjandus\\
+		\midrule
+		1 & Aine struktuur ja akadeemiline kontekst. EA ja ümberkaudsed mõisted. Ettevõttearhitekti roll. Eri vaated ettevõttele & Mida teeb ettevõttearhitekt Microsoftis, Eesti Energias, Swedpankis, Riigi Infosüsteemi Ametis, Transferwise's?  & \cite{parsons2005enterprise}; \cite{hickey}; \cite{sysengineering}; \cite{winter2006essential}\\
+		2 & Modelleerimine. Kasud, kahjud. Numbrilised meetodid. UMLi ja ORMi põhitõed. Staatiline ja dünaamiline vaade. & Modelleerime: ERP, veebipood, kohtvõrk, EMTA, Avaandmed. Loengu pidamise äriprotsess & \cite{OPM}; \cite{umldistilled}\\
+		3 & Arhitektuur, väärtus ja äri& & \\
+		4 & Äriprotsess ja selle modelleerimine & & \\
+		5 & Äriprotsessist infosüsteemini. Linnaplaneerimine & & \cite{longepe2003enterprise}; \cite{bertin2014urbanization}\\
+		6 & Infosüsteemist äriprotsessini. Infosüsteemi mõju organisatsioonile. Conway seadus, selle implikatsioonid & & \cite{conway1968committees}; \cite{maccormack2012exploring}\\
+		7 & Süsteemiarhitektuuri alused & & \cite{crawley2015system}\\
+		8 & Keerukus ja selle juhtimine & & \cite{holt2017so}\\
+	\end{tabular}
+	\caption{Loengute teemad, ülesanded ja kirjandus}
+	\label{tab:content}
+\end{table*}
+
+\section{Loengud}
+\subsection{Esimene}
+
+Kordamisküsimused kirjanduse tarbeks on järgmised:
+\begin{itemize}
+	\item Mis on ettevõttearhitekti\sidenote{Parema puudumisel kasutame siin ja edaspidi toortõlget ingliskeelsest \emph{Enterprise Architect}i mõistest} roll \citeauthor{parsons2005enterprise}, \citeauthor{sysengineering} ja \citeauthor{winter2006essential} arvates, mis on peamised erinevused?
+	\item Mis on peamised EA kihid \cite{winter2006essential} järgi?
+	\item Millistest kuus vaadet eksisterivad arhitektuurile \citeauthor{sysengineering} järgi? Millisesse neist kuuluvad ORM ja UML?
+	\item Mis on \citeauthor{hickey} järgi peamine EA probleem agiilses transformatsioonis ning mis on peamised viisid selle ületamiseks?
+\end{itemize}
+
+Harjutuseks arutame koos ettevõttearhitekti rolli üle eri tüüpi ettevõtetes. Rolli põhiküsimused on:
+\begin{itemize}
+	\item Mis on lahendatav põhiprobleem?
+	\item Kellele raporteeritakse?\sidenote{Laiemalt, kus organisatsioonis roll paikneb. Pane tähele, kuidas roll sõltub organisatsiooni struktuurist}
+	\item Millised on õigused ja kohustused?
+	\item Mis on kontrollitava süsteemi ulatus?
+	\item Kes on otsesed ja kaudsed alluvad?
+\end{itemize}
+
+Vaadeldavad organisatsioonid:
+\begin{itemize}
+	\item Microsoft kui hiiglaslik rahvusvaheline tarkvaraettevõte
+	\item Eesti Energia kui suur tehnoloogiaettevõte
+	\item Swedbank Baltic kui rahvusvaheline osa suurest rahvusvahelisest mitte-tehnoloogiaettevõttest
+	\item Riigi Infosüsteemi Amet kui taristut pakkuv riigiasutus
+	\item Transferwise kui kasvufaasi iduettevõte\sidenote{Pane tähele, kuidas tegu on hübriidiga finants- ja tehnoloogiaettevõttest}
+\end{itemize}
+
+\section{Lisalugemist}
+\begin{itemize}
+	\item \cite{simon1996sciences}. Huvitav ja suhteliselt populaarne käsitlus keerulistest süsteemidest 
+	\item  \cite{stanford2005guide}.Economisti põhjalik vaade organisatsiooni kui sellise disaini
+\end{itemize}
+
+\bibliography{idu1321}
+\bibliographystyle{plainnat}
+\end{document}
