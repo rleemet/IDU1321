@@ -44,6 +44,7 @@ Käesolev dokument on Tallinna Tehnikaülikooli aine ``IDU1321 - Ettevõtte äri
 	\item[1.0] Esimene levitatav 
 	\item[1.1] Lisatud lõik iseseisva töö kohta
 	\item[1.5] Täiendatud teise loengu kirjanduse loetelu
+	\item[2.0] Teise loengu sisu olemas
 \end{description}
 
 \section{Meetod}
@@ -81,6 +82,7 @@ Loeng koosneb kolmest osast:
 	\item Kokkuvõte harjutustest, sissejuhatus järgmisse teemasse ja ülevaade kirjandusest
 \end{enumerate}
 
+\renewcommand{\arraystretch}{1.3}
 \begin{table*}[ht]
 \small
 	\centering
@@ -90,8 +92,8 @@ Loeng koosneb kolmest osast:
 		& Loeng & Harjutus & Kirjandus\\
 		\midrule
 		1 & Aine struktuur ja akadeemiline kontekst. EA ja ümberkaudsed mõisted. Ettevõttearhitekti roll. Eri vaated ettevõttele & Mida teeb ettevõttearhitekt Microsoftis, Eesti Energias, Swedpankis, Riigi Infosüsteemi Ametis, Transferwise's?  & \cite{parsons2005enterprise}; \cite{hickey}; \cite{sysengineering}; \cite{winter2006essential}\\
-		2 & Modelleerimine. Kasud, kahjud. Numbrilised meetodid. UMLi ja ORMi põhitõed. Staatilised ja dünaamilised vaated. & Modelleerime: ERP, veebipood, kohtvõrk, EMTA, Avaandmed. Loengu pidamise äriprotsess & \cite{OPM}; \cite{umldistilled}, \cite{heumann2005introduction}\\
-		3 & Arhitektuur, väärtus ja äri& & \\
+		2 & Modelleerimine. Kasud, kahjud. UMLi ja ORMi põhitõed. Staatilised ja dünaamilised vaated. & Modelleerime: Kohvitass, ERP & \cite{OPM}; \cite{heumann2005introduction}, \cite{box1976science}, \cite[peatükk 3]{ferenvcik2004survey}\\
+		3 & Arhitektuur, väärtus ja äri. Strateegia ja arhitektuur & & \cite{gadiesh2001transforming}; \cite{senge2002leader}\\
 		4 & Äriprotsess ja selle modelleerimine & & \cite{wohed2006suitability}\\
 		5 & Äriprotsessist infosüsteemini. Linnaplaneerimine & & \cite{longepe2003enterprise}; \cite{bertin2014urbanization}\\
 		6 & Infosüsteemist äriprotsessini. Infosüsteemi mõju organisatsioonile. Conway seadus, selle implikatsioonid & & \cite{conway1968committees}; \cite{maccormack2012exploring}\\
@@ -134,11 +136,39 @@ Vaadeldavad organisatsioonid:
 	\item Transferwise kui kasvufaasi iduettevõte\sidenote{Pane tähele, kuidas tegu on hübriidiga finants- ja tehnoloogiaettevõttest}
 \end{itemize}
 
+\subsection{Teine}
+Kordamisküsimused kirjanduse tarbeks on järgmised:
+\begin{itemize}
+	\item Mis on põhimõtteline vahe UML ja ORM mudelite vahel?
+	\item Mis elemendid on kaasatud igasse kommunikatsiooni?
+	\item Kuidas suhtub mudel füüsilisse reaalsusse?
+\end{itemize}
+
+Modelleerime kohvitassi ja ERP\sidenote{\emph{Enterprise Resource Planning}} süsteemi. Mõlema puhul esitame küsimused:
+\begin{itemize}
+	\item Miks me modelleerimie?
+	\item Mida \emph{kasulikku} see asi teeb?
+	\item Millistest tükkidest ta koosneb?
+	\item Millised on seosed tükkide ja funktsiooni vahel?
+\end{itemize}
+
 \section{Lisalugemist}
 \begin{itemize}
-	\item \cite{simon1996sciences}. Huvitav ja suhteliselt populaarne käsitlus keerulistest süsteemidest 
-	\item  \cite{stanford2005guide}.Economisti põhjalik vaade organisatsiooni kui sellise disaini
-	\item \cite{fatolahi2006investigation}. Üsna põhjalik käsitlus Zachmani EA raamistikust ja selle rakendamisest UMLi abil. Hulgaliselt kasulikke viiteid, päris hea sissevaade akadeemilisse modelleerimsie ja EA maailma
+	\item Üldist
+	\begin{itemize}	
+		\item \cite{simon1996sciences}. Huvitav ja suhteliselt populaarne käsitlus keerulistest süsteemidest 
+		\item  \cite{stanford2005guide}.Economisti põhjalik vaade organisatsiooni kui sellise disaini
+	\end{itemize}
+	\item UML
+	\begin{itemize}
+		\item \cite{fatolahi2006investigation}. Üsna põhjalik käsitlus Zachmani EA raamistikust ja selle rakendamisest UMLi abil. Hulgaliselt kasulikke viiteid, päris hea sissevaade akadeemilisse modelleerimsie ja EA maailma
+		\item \cite{umldistilled} Hästi käepärane maakeelne UMLi käsiraamat
+	\end{itemize}
+	\item Kommunikatsioon ja modelleerimine
+	\begin{itemize}
+		\item \cite{shannon2001mathematical} Kommunikatsiooniteooria tüvitekst. Esimene koht, kus räägitakse kommunikatsiooniprotsessi elementidest
+		\item \cite{tufte}. Kohustuslik kirjandus igaühele, kes edastab keerulise struktuuriga kvantitatiivset informatsiooni
+	\end{itemize}
 \end{itemize}
 
 \bibliography{idu1321}
