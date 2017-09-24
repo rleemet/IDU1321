@@ -57,7 +57,13 @@ Iseiseisva töö eesmärgiks on modelleerida iseseisvalt üks kitsas lõik keeru
 \end{itemize}
 
 \section{Ülesanne}
-Te olete ühe väikeriigi maksuameit ettevõttearhitekt. Loomulikult on teil olemas kõrge taseme ülevaade kogu organisatsioonis toimuvast, kuid (kuna tegu on kriitilise äriprotsessiga) on teil tarvis koostada eraisiku tulu deklareerimise organisatsiooni arhitektuur. 
+Te olete ühe väikeriigi maksuameit ettevõttearhitekt. Loomulikult on teil olemas kõrge taseme ülevaade kogu organisatsioonis toimuvast, kuid (kuna tegu on kriitilise äriprotsessiga) on teil tarvis koostada eraisiku tulu deklareerimise organisatsiooni arhitektuur. Eesmärgiks on luua \textbf{dokument, mis võimaldab jälgida kõikide osakondade vastutust tehnilise komponendini ning siduda kõik tehnilised komponendid konkreetsete kasutuslugude, sealtkaudu äriprotsessi sammude ja edasi organisatsiooniliste üksustega.}
+\begin{marginfigure}%
+  \includegraphics[width=\linewidth]{bpmn.png}
+  \caption{Näide seoste kujutamisest eri kihtide vahel}
+  \label{fig:bpmn}
+\end{marginfigure}
+
 
 Teie töö vastu tunnevad huvi järgmised osakonnad
 \begin{description}
@@ -68,9 +74,9 @@ Teie töö vastu tunnevad huvi järgmised osakonnad
 
 \section{Tulem}
 \begin{marginfigure}%
-  \includegraphics[width=\linewidth]{bpmn.png}
-  \caption{Näide seoste kujutamisest eri kihtide vahel}
-  \label{fig:bpmn}
+  \includegraphics[width=\linewidth]{kasutuslood.png}
+  \caption{Eri kihtide objektid samal diagrammil}
+  \label{fig:uc}
 \end{marginfigure}
 
 Tulemis on esindatud järgmised kihid
@@ -81,14 +87,13 @@ Tulemis on esindatud järgmised kihid
 	\item[Süsteemid] Millised süsteemid\sidenote{Linnaplaneerimise mõttes} leiduvad, millistesse tsoonidesse nad jagunevad ning mis kasutuslood puudutavad milliseid süsteeme?
 	\item[Tehnilised komponendid] Millistest suurematest\sidenote{Klassidiagrammi tasemele ei ole vaja minna aga veebirakendus ja andmebaas võiksid olla markeeritud} komponentidest süsteemid koosnevad
 \end{description}
-
-Eritüübiliste objektide vahelise seoste demonstreerimiseks võib kasutada millist iganes selge semantikaga vahendit. Peamised võimalused on
 \begin{marginfigure}%
-  \includegraphics[width=\linewidth]{kasutuslood.png}
+  \includegraphics[width=\linewidth]{tsoonid.png}
   \caption{Eri kihtide objektid samal diagrammil}
-  \label{fig:uc}
+  \label{fig:zone}
 \end{marginfigure}
 
+Eritüübiliste objektide vahelise seoste demonstreerimiseks võib kasutada millist iganes selge semantikaga vahendit. Peamised võimalused on
 \begin{itemize}
 	\item Seosed objektide vahel, nagu näidatud joonisel \ref{fig:uc}. 
 	\item Värvid, nagu näidatud joonisel \ref{fig:bpmn}. Eri osakondade sammud on eri värvi. Sobilik, kui diagramm on keeruline ja seoste näitamine läheks liiale
@@ -97,11 +102,6 @@ Eritüübiliste objektide vahelise seoste demonstreerimiseks võib kasutada mill
 
 Muidugi võib kasutada ka eri variantide kombinatsiooni, nagu joonisel \ref{fig:zone}
 
-\begin{marginfigure}%
-  \includegraphics[width=\linewidth]{tsoonid.png}
-  \caption{Eri kihtide objektid samal diagrammil}
-  \label{fig:zone}
-\end{marginfigure}
 
 
 \bibliography{idu1321}
