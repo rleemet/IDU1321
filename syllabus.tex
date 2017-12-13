@@ -3,6 +3,8 @@
 \usepackage[estonian]{babel}
 \usepackage[style=english]{csquotes}
 
+\usepackage{multirow}
+
 \title{IDU1321 - Ettevõtte äriarhitektuur syllabus}
 \author[Andres Kütt]{Andres Kütt}
 
@@ -43,6 +45,7 @@ Käesolev dokument on Tallinna Tehnikaülikooli aine ``IDU1321 - Ettevõtte äri
 \begin{description}
 	\item[4.0] Lisatud viienda loengu küsimused ja harjutuse näide
 	\item[5.0] Kuuenda loengu sisu olemas
+	\item[6.0] Kõigi loengute kordamisküsimused koondatud
 \end{description}
 
 \section{Meetod}
@@ -106,17 +109,64 @@ Loeng koosneb kolmest osast:
 \section{Iseseisev töö}
 Ainekaardilt: \enquote{Ülesandeks on välja töötada konkreetse (reaalse või väljamõeldud) organisatsiooni infosüsteemi viiekihiline mudel. Lähtudes konkreetsest äriprotsessist koostatakse organisatsiooni, kasutuslugude, funktsionaalsete osiste ja tehniliste komponentide mudelid. Tulemus kantakse ette.}
 
+
+  %---------------------
+\section{Kordamisküsimused}
+Tabel \ref{tab:questions} leheküljel \pageref{tab:questions} sisaldab kordamisküsimusi allikate kaupa. 
+
+\begin{table*}[ht]
+\small
+	\centering
+	\fontfamily{ppl}\selectfont
+	\begin{tabular}{p{4.5cm}p{11cm}}
+		\toprule
+		Allikas & Küsimus \\
+		\midrule
+% Esimene
+		\cite{parsons2005enterprise}, \cite{sysengineering}, \cite{winter2006essential} & Mis on ettevõttearhitekti roll \citeauthor{parsons2005enterprise}, \citeauthor{sysengineering} ja \citeauthor{winter2006essential} arvates, mis on peamised erinevused?\\
+		\cite{winter2006essential} & Mis on peamised EA kihid \cite{winter2006essential} järgi?\\
+		\cite{sysengineering} & Millistest kuus vaadet eksisterivad arhitektuurile \citeauthor{sysengineering} järgi? Millisesse neist kuuluvad ORM ja UML? \\
+		\cite{hickey} & Mis on \citeauthor{hickey} järgi peamine EA probleem agiilses transformatsioonis ning mis on peamised viisid selle ületamiseks? \\
+% Teine		
+\cite{OPM}; \cite{heumann2005introduction} & Mis on põhimõtteline vahe UML ja ORM mudelite vahel? \\
+\cite[peatükk 3]{ferenvcik2004survey} &  Mis elemendid on kaasatud igasse kommunikatsiooni?\\
+\cite{box1976science}&  Kuidas suhtub mudel füüsilisse reaalsusse?\\
+% Kolmas
+\cite{gadiesh2001transforming} & Mis on strateegilise printsiibi peamised omadused? \\
+\cite{senge2002leader} & Mis on loominguline pinge ja kuidas ta tekib? \\
+& Millised on Senge järgi liidri rollid õppivas organisatsioonis? \\
+
+% Neljas
+\cite{checkland2000soft} & Milles erinevad \enquote{pehme} ja \enquote{kõva} suhtumine süsteemidesse? \\
+ & Kuidas kirjeldada tegevust PQR mudeli järgi?\\
+ & Millistest loogilistest sammudest koosneb tegevusmudeli koostamine?\\
+
+% Viies
+
+\cite{wohed2006suitability} & Kuidas sobib BPMN \emph{control-flow}, \emph{data} ja \emph{resouce} perspektiivide esitamiseks? \\
+\cite{bertin2014urbanization} & Kritiseerige Longépé urbanisatsiooniparadigmat, eriti selle maakasutusplaani (LUP) \\
+
+% Kuues 
+\cite{conway1968committees}  & Miks ja mis faasides suurte süsteemide struktuur arenduse käigus laguneb? \\
+ & Miks ei ole mõistlik konteksti lisamata rääkida süsteemi ühest konkreetsest disainist? \\
+
+% Seitsmes
+\cite{sysengineering} & Mis on süsteemiarhitektuuri kui teadusvaldkonna eesmärk? \\
+
+% Kaheksas
+\cite{holt2017so} & Millistest osadest koosneb \emph{Cynefin} raamistik?\\
+ & Miks on oluline keerukusega tegeleda? \\
+ & Mis on viis võtmesoovitust tootearenduseks keerulises keskkonnas? \\
+		\bottomrule
+	\end{tabular}
+	\caption[][6mm]{Kordamisküsimused}
+	\label{tab:questions}
+\end{table*}
+  
+  
+  %---------------------
 \section{Loengud}
 \subsection{Esimene}
-
-Kordamisküsimused kirjanduse tarbeks on järgmised:
-\begin{itemize}
-	\item Mis on ettevõttearhitekti\sidenote{Parema puudumisel kasutame siin ja edaspidi toortõlget ingliskeelsest \emph{Enterprise Architect}i mõistest} roll \citeauthor{parsons2005enterprise}, \citeauthor{sysengineering} ja \citeauthor{winter2006essential} arvates, mis on peamised erinevused?
-	\item Mis on peamised EA kihid \cite{winter2006essential} järgi?
-	\item Millistest kuus vaadet eksisterivad arhitektuurile \citeauthor{sysengineering} järgi? Millisesse neist kuuluvad ORM ja UML?
-	\item Mis on \citeauthor{hickey} järgi peamine EA probleem agiilses transformatsioonis ning mis on peamised viisid selle ületamiseks?
-\end{itemize}
-
 Harjutuseks arutame koos ettevõttearhitekti rolli üle eri tüüpi ettevõtetes. Rolli põhiküsimused on:
 \begin{itemize}
 	\item Mis on lahendatav põhiprobleem?
@@ -136,13 +186,6 @@ Vaadeldavad organisatsioonid:
 \end{itemize}
 
 \subsection{Teine}
-Kordamisküsimused kirjanduse tarbeks on järgmised:
-\begin{itemize}
-	\item Mis on põhimõtteline vahe UML ja ORM mudelite vahel?
-	\item Mis elemendid on kaasatud igasse kommunikatsiooni?
-	\item Kuidas suhtub mudel füüsilisse reaalsusse?
-\end{itemize}
-
 Modelleerime kohvitassi ja ERP\sidenote{\emph{Enterprise Resource Planning}} süsteemi. Mõlema puhul esitame küsimused:
 \begin{itemize}
 	\item Miks me modelleerimie?
@@ -152,13 +195,6 @@ Modelleerime kohvitassi ja ERP\sidenote{\emph{Enterprise Resource Planning}} sü
 \end{itemize}
 
 \subsection{Kolmas}
-Kordamisküsimused kirjanduse tarbeks on järgmised:
-\begin{itemize}
-	\item Mis on strateegilise printsiibi peamised omadused?
-	\item Mis on loominguline pinge ja kuidas ta tekib?
-	\item Millised on Senge järgi liidri rollid õppivas organisatsioonis?
-\end{itemize}
-
 Uurime, EMTA arhitektuuri vastates ettevõtte arhitekti positsioonilt küsimustele
 \begin{itemize}
 	\item Mida EMTA teeb?
@@ -180,19 +216,7 @@ Uurime, EMTA arhitektuuri vastates ettevõtte arhitekti positsioonilt küsimuste
 	\end{itemize}
 \end{itemize}
 
-\subsection{Neljas}
-Kordamisküsimused kirjanduse jaoks
-\begin{itemize}
-	\item Milles erinevad \enquote{pehme} ja \enquote{kõva} suhtumine süsteemidesse?
-	\item Kuidas kirjeldada tegevust PQR mudeli järgi?
-	\item Millistest loogilistest sammudest koosneb tegevusmudeli koostamine?
-\end{itemize}
-
 \subsection{Viies}
-Kordamisküsimused kirjanduse jaoks
-\begin{itemize}
-	\item 
-\end{itemize}
 
 \begin{figure}%
 \begin{center}
@@ -203,12 +227,6 @@ Kordamisküsimused kirjanduse jaoks
 \end{figure}
 
 \subsection{Kuues}
-Kordamisküsimused kirjanduse jaoks
-\begin{itemize}
-	\item Miks ja mis faasides suurte süsteemide struktuur arenduse käigus laguneb?
-	\item Miks ei ole mõistlik konteksti lisamata rääkida süsteemi ühest konkreetsest disainist?
-\end{itemize}
-
 \newthought{Ühes suures tehases töötas hr. Starostin.} Tehas oli suur ja kuulus veel suuremasse kontserni, kus sedalaadi käitiseid oli palju. Ei ole tähtis, mis ametit Starostin seal tehases pidas. Oluline on vaid, et ta suhtles tehase Tähtsa Direktoriga igapäevaselt. Tähtis Direktor pidi igakuiselt raporteerima oma ülemustele kõikvõimalikke numbreid tehase toimimise kohta. Sealhulgas erinevaid parameetreid heitmete --- $CO_2$, heitveed ja nende koostis, jne. --- kohta. Nii oli alati olnud. Insenerid lugesid oma ringkäikudel seierite näidud, kirjutasid need üles ning sekretär vormistas neist Tähtsa Direktori jaoks aruande. See kõik oli tüütu, sest inseneridel oli muudki teha, kui paberitega ringi joosta ja sekretär ajas alailma kilomeetrid kilogrammidega segi. 
 
 \newthought{Aga hr. Starostin oli kooli ajal veebilehtesid teinud.} Ta teadis, et tehas oli küllalt moodne ning tegelikult olid kõigi nonde seierite taga digitaalsed andurid. Ja tal sündis plaan. Ta hankis peainsenerilt vajaliku dokumentatsiooni ning pusis nädalavahetusega kokku rakenduse, mis igal ööl anduritega ühendust võttis ning andmed baasi kirjutas. Aga baasi otsa ehitas ta lihtsa veebilehe, mis sealt andmed võttis, kokku liitis ning aruande vormiks kujundas. Kõik olid õnnelikud: sekretäri pea ei valutanud enam, insenerid said oma tööd teha ja Tähtis Direktor ei jäänud enam ülemuste ees lolliks. Starostin sai kiita. Tähtis Direktor sai aru, et seda inimest ära kasutades sai ta suure hulga tehase igapäevase opereerimise tüütutest probleemidest lahendada ilma, et oleks pidanud keskse it-organisatsiooni tüütute protsessidega jandama. Või nende arveid maksma. Isegi keskne it-organisatsioon oli rahul, sest nad said tegeleda Oluliste Asjadega selle asemel, et mingi tehase pisiasjadele mõelda. Pealegi oli siin tegemist ebameeldivalt keeruliste SCADA süsteemidega mille torkimiseks piisava pikkusega pulka ei olnud peakontori tarkvarainseneride meelest veel välja mõeldud. 
@@ -246,7 +264,19 @@ Kordamisküsimused kirjanduse jaoks
 	\begin{itemize}
 		\item \cite{longepe2003enterprise}. Huvitav, peamiselt frankofiilses kultuuriruumis, levinud käsitlus ettevõtte arhitektuurist ning selle paralleelidest linnaplaneerimisega
 	\end{itemize}
+	\item Keerukus
+	\begin{itemize}
+		\item \url{https://goo.gl/gPtX6F}. de Wecki loeng keerukusest koos slaididega
+	\end{itemize}
 \end{itemize}
+
+%-----------------------------------
+
+
+
+
+
+
 
 \bibliography{idu1321}
 \bibliographystyle{plainnat}
