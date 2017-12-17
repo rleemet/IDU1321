@@ -41,8 +41,8 @@ Siin kirjeldan ainue IDU1321 iseseisva ülesande sisu ja eesmärki
 
 \section{Versioonid}
 \begin{description}
-	\item[1.0] Esimene levitatav 
 	\item[1.1] Täpsustatud jooniste formaati ja hindamist
+	\item[2.0] Ühtlustatud kruntide/süsteemide terminoloogiat, lisatud tüüpvigade sektsioon
 \end{description}
 
 \section{Eesmärk}
@@ -95,8 +95,8 @@ Tulemis on esindatud järgmised kihid
 	\item[Organisatsioon] Mis organisatsiooni osad protsessis osalevad\sidenote{Vt. eelmist punkti minimaalse hulga osas, alati võib uusi üksusi lisada}
 	\item[Äriprotsess] Millistest sammudest koosneb äriprotsess\sidenote{Piisab \enquote{happy day} stsenaariumist ja paarist alternatiivsest harust} ja kuidas on need sammud seotud organisatsiooniga
 	\item[Kasutuslood] Mis kasutuslood\sidenote{Võib keskenduda peamisele väärtusprotsessile ja ignoreerida lisategevusi nagu kasutaja tuvastamine} realiseerivad millised protsessi sammud
-	\item[Süsteemid] Millised süsteemid\sidenote{Linnaplaneerimise mõttes} leiduvad, millistesse tsoonidesse nad jagunevad ning mis kasutuslood puudutavad milliseid süsteeme?
-	\item[Tehnilised komponendid] Millistest suurematest\sidenote{Klassidiagrammi tasemele ei ole vaja minna aga veebirakendus ja andmebaas võiksid olla markeeritud} komponentidest süsteemid koosnevad
+	\item[Krundid] Millised krundid\sidenote{Linnaplaneerimise metoodikas kutsutakse süsteemi funktsionaalseid osi \enquote{kruntideks}. Neist võib mõelda kui teatavas mõttes allsüsteemidest} leiduvad, millistesse tsoonidesse nad jagunevad ning mis kasutuslood puudutavad milliseid krunte?
+	\item[Tehnilised komponendid] Millistest suurematest\sidenote{Klassidiagrammi tasemele ei ole vaja minna aga veebirakendus ja andmebaas võiksid olla markeeritud} komponentidest krundid koosnevad
 \end{description}
 \begin{marginfigure}%
   \includegraphics[width=\linewidth]{tsoonid.png}
@@ -109,11 +109,20 @@ Eritüübiliste objektide vahelise seoste demonstreerimiseks võib kasutada mill
 	\item Seosed objektide vahel, nagu näidatud joonisel \ref{fig:uc}. 
 	\item Värvid, nagu näidatud joonisel \ref{fig:bpmn}. Eri osakondade sammud on eri värvi. Sobilik, kui diagramm on keeruline ja seoste näitamine läheks liiale
 	\item Sisalduvus paketis, nagu näidatud joonisel \ref{fig:zone}
+	\item Tabel, kus ridades ja veergudes on seostatavad osised ja seos on lahtrisse märgitud ristiga
 \end{itemize}
 
 Muidugi võib kasutada ka eri variantide kombinatsiooni, nagu joonisel \ref{fig:zone}
 
 
+\section{Tüüpvigu}
+Eelmiste aastate kodutööde hindamisel on tulnud välja hulk tüüpvigu, mida tasub vältida
+\begin{itemize}
+	\item Seosed tsoonide ja mitte kruntidega. Näiteks seos tehnilise komponendi ja kanalitsooni vahel ei ütle lugejale midagi selle kohta, mida too tehniline komponent teeb andes vaid info, et tõenäoliselt paistab komponent kuidagi välisvõrku. Seos otse krundiga annab aga täpse teadmise, millist funktsionaalsust antud tehniline komponent realiseerib. Sama kehtib ka kasutuslugude kohta: seos tsooniga ei anna olulist infot, seos krundiga annab
+	\item Seoste puudumine kihtide vahel. Kogu harjutuse mõte on siduda organisatsiooni eri aspekte tervikuks. Seega on seoste puudumine (tüüpiliselt kasutuslugude ja äriprotsessi sammude vahel aga ka mujal) oluliseks puuduseks
+	\item Tehniliste komponentide mõiste segamine krundi mõistega. Tehniline komponent on miski, mis realiseerib mingi krundi mingit funktsionaalsust. Seega on krunt nimega \enquote{andmebaas} sisuliselt vale. Andmebaas kui selline realiseerib reeglina mingit funktsionaalsust aga millist?
+	\item Tehniliste komponentide liigne abstraktsioon \enquote{serveri} ja \enquote{andmebaasi} tasemele. Jah, me saame teada, et krunti realiseerib andmebaas ja server aga milline? Kui joonisel on toodud üks server ja üks andmebaas, võib sellest järeldada, et küllap ongi kogu funktsionaalsus koondunud ühte tehnilisse komponentide ja ühte andmebaasi aga kui servereid ja andmebaase on mitu, jääb tehniliste komponentide kihi infosisaldus väga lahjaks
+\end{itemize}
 
 \bibliography{idu1321}
 \bibliographystyle{plainnat}
